@@ -37,10 +37,15 @@
   },
   "homepage": "./",
   "dependencies": {
+    "electron-debug": "^3.0.0",
+    "electron-devtools-installer": "^2.2.4",
     "electron-is-dev": "^1.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-redux": "^7.0.3",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -71,7 +76,7 @@
   },
   "build": {
     "appId": "com.my-website.my-app",
-    "productName": "MyApp",
+    "productName": "LeapFrog",
     "copyright": "Copyright © 2019 ${author}",
     "mac": {
       "category": "public.app-category.utilities"
