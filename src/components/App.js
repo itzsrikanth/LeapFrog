@@ -1,24 +1,38 @@
 import React from 'react';
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          DynamoDB GUI Editor
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LeapFrog
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </Router>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
+    </>
   );
+}
+
+class Home extends React.Component {
+  render() {
+    return (
+      <h1>Home</h1>
+    );
+  }
+}
+
+class About extends React.Component {
+  render() {
+    return (
+      <h1>About</h1>
+    );
+  }
 }
 
 export default App;
