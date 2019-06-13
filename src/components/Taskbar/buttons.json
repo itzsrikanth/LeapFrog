@@ -1,19 +1,83 @@
 [
     {
-        "name": "primary",
+        "name": "connections",
         "buttons": [
             {
                 "name": "home",
                 "icon": "add-1.svg"
+            },
+            {
+                "name": "connect",
+                "icon": "database-1.svg"
+            },
+            {
+                "name": "open",
+                "icon": "folder-7.svg"
+            },{
+                "name": "disconnect",
+                "icon": "broken-link.svg"
             }
         ]
     },
     {
-        "name": "connections",
+        "name": "query",
         "buttons": [
             {
-                "name": "connect",
-                "icon": "database-1.svg"
+                "name": "run",
+                "icon": "play-button-1.svg"
+            },
+            {
+                "name": "pause",
+                "icon": "pause-1.svg"
+            },
+            {
+                "name": "stop",
+                "icon": "minus.svg"
+            },
+            {
+                "name": "filter",
+                "icon": "funnel.svg"
+            },
+            {
+                "name": "download",
+                "icon": "cloud-computing.svg"
+            },
+            {
+                "name": "upload file",
+                "icon": "attachment.svg"
+            },
+            {
+                "name": "upload",
+                "icon": "cloud-computing-2.svg"
+            },
+            {
+                "name": "result snapshot",
+                "icon": "photo-camera.svg"
+            },
+            {
+                "name": "delete",
+                "icon": "trash.svg"
+            }
+        ]
+    },
+    {
+        "name": "misc",
+        "buttons": [
+            {
+                "name": "tips",
+                "icon": "idea.svg"
+            },
+            {
+                "name": "notifications",
+                "icon": "alarm-1.svg"
+            },
+            {
+                "name": "help",
+                "icon": "help.svg"
+            },
+            {
+                "name": "settings",
+                "icon": "settings-5.svg"
             }
         ]
     }

@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.info-heading {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: $font-disabled;
+    font-size: .75rem;
+}

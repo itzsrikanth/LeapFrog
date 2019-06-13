@@ -2,6 +2,7 @@
 
 
 $taskbarHeight: 3rem;
+$statusbarHeight: 1rem;
 
 .credit {
     position: fixed;
@@ -18,16 +19,24 @@ $taskbarHeight: 3rem;
     box-sizing: border-box;
 }
 
+.app {
+    height: calc(100vh - #{$taskbarHeight + $statusbarHeight});
+}
+
 .info-preview {
-    min-width: 18rem;
-    width: 20vw;
-    height: calc(100vh - #{$taskbarHeight});
     background: $primary;
     border-right: solid 2px $border;
     box-sizing: border-box;
     box-shadow:  inset -10px -10px 30px -1px rgba(0,0,0,0.75);
 }
 
-.code-preview {
-    // width: 
+.code-editor {
+    background: yellow; 
+}
+
+.status-bar {
+    height: $statusbarHeight;
+    background: $primary;
+    box-sizing: border-box;
+    border-top: solid 2px $border;
 }

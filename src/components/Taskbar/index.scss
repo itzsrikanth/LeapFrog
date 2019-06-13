@@ -1,5 +1,25 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
+
+.tb-ribbon {
+  cursor: pointer;
+  &:not(:last-child) {
+      border-right: solid 2px black;
+  }
+  &:last-child {
+      margin-left: auto;
+  }
+}
 
 .tb-button {
-    color: $font-enabled;
+    // border: solid .5px transparent;
+  &:hover {
+    transition: background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.15);
+    // border: solid .5px rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+  & > img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }

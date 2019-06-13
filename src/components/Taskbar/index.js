@@ -2,13 +2,16 @@ import React from 'react';
 import './index.scss';
 import data from './buttons.json';
 
+const svgPath = `${process.env.PUBLIC_URL}/assets/svg`;
 export default class Taskbar extends React.Component {
 
     generateTaskbar = () =>
         data.map(ribbon => (
-            <div id={ribbon.name} className="tb-ribbon">
+            <div key={ribbon.name} id={ribbon.name} className="tb-ribbon px-2 py-1 d-flex h-100">
                 {ribbon.buttons.map(btn => (
-                    <span id={btn.name} className="tb-button">{btn.icon}</span>
+                    <div key={btn.name} id={btn.name} className="tb-button px-2 py-1">
+                        <img src={`${svgPath}/${btn.icon}`} alt={btn.name} />
+                    </div>
                 ))}
             </div>
         ));
@@ -16,7 +19,9 @@ export default class Taskbar extends React.Component {
     render() {
         console.log(data);
         return (
-            <div>{this.generateTaskbar()}</div>
+            <div className="d-flex align-items-center h-100">
+                {this.generateTaskbar()}
+            </div>
         );
     }
 }
