@@ -1,0 +1,20 @@
+[
+    {
+        "name": "primary",
+        "buttons": [
+            {
+                "name": "home",
+                "icon": "add-1.svg"
+            }
+        ]
+    },
+    {
+        "name": "connections",
+        "buttons": [
+            {
+                "name": "connect",
+                "icon": "database-1.svg"
+            }
+        ]
+    }
+]

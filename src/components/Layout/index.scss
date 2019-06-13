@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+
+$taskbarHeight: 3rem;
+
+.credit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.taskbar {
+    width: 100vw;
+    height: $taskbarHeight;
+    background: $primary;
+    border-bottom: solid 2px $border;
+    box-sizing: border-box;
+}
+
+.info-preview {
+    min-width: 18rem;
+    width: 20vw;
+    height: calc(100vh - #{$taskbarHeight});
+    background: $primary;
+    border-right: solid 2px $border;
+    box-sizing: border-box;
+    box-shadow:  inset -10px -10px 30px -1px rgba(0,0,0,0.75);
+}
+
+.code-preview {
+    // width: 
+}
