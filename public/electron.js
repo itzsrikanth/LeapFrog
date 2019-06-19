@@ -1,19 +1,98 @@
 // Modules to control application life and create native browser window
 const path = require('path');
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const isDev = require('electron-is-dev');
-require( "electron-debug" )();
+require("electron-debug")();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
+const template = [
+  {
+    label: 'Edit',
+    submenu: [
+      {
+        role: 'undo'
+      },
+      {
+        role: 'redo'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        role: 'cut'
+      },
+      {
+        role: 'copy'
+      },
+      {
+        role: 'paste'
+      }
+    ]
+  },
 
-function createWindow () {
+  {
+    label: 'View',
+    submenu: [
+      {
+        role: 'reload'
+      },
+      {
+        role: 'toggledevtools'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        role: 'resetzoom'
+      },
+      {
+        role: 'zoomin'
+      },
+      {
+        role: 'zoomout'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        role: 'togglefullscreen'
+      }
+    ]
+  },
+
+  {
+    role: 'window',
+    submenu: [
+      {
+        role: 'minimize'
+      },
+      {
+        role: 'close'
+      }
+    ]
+  },
+
+  {
+    role: 'help',
+    submenu: [
+      {
+        label: 'Learn More'
+      }
+    ]
+  }
+];
+
+function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
     height: 600
-  })
+  });
+  Menu.setApplicationMenu(
+    Menu.buildFromTemplate(template)
+  );
 
   // and load the index.html of the app.
   // win.loadFile('index.html')
