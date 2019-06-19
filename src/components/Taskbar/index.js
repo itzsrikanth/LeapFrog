@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.scss';
 import data from './buttons.json';
 
 const svgPath = `${process.env.PUBLIC_URL}/assets/svg`;
+const buttonClasses = 'tb-button px-2 py-1';
 export default class Taskbar extends React.Component {
 
     generateTaskbar = () =>
@@ -14,14 +15,11 @@ export default class Taskbar extends React.Component {
                     switch (btn.type) {
                         case 'link':
                             return (
-                                <Router key={btn.name} >
-                                    <Link to={btn.to} >{img}</Link>
-                                </Router>
-                            )
+                                <Link className={buttonClasses} to={btn.to} >{img}</Link>
+                            );
                         default:
                             return (
-                                <div key={btn.name} id={btn.name} className="tb-button px-2 py-1">
-                                    {img}</div>
+                                <div key={btn.name} id={btn.name} className={buttonClasses}>{img}</div>
                             );
                     }
                 })}
@@ -29,7 +27,7 @@ export default class Taskbar extends React.Component {
         ));
 
     render() {
-        console.log(data);
+        console.log(window.location.href);
         return (
             <div className="d-flex align-items-center h-100">
                 {this.generateTaskbar()}
