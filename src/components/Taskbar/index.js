@@ -15,7 +15,7 @@ export default class Taskbar extends React.Component {
                     switch (btn.type) {
                         case 'link':
                             return (
-                                <Link className={buttonClasses} to={btn.to} >{img}</Link>
+                                <Link key={btn.name} className={buttonClasses} to={btn.to} >{img}</Link>
                             );
                         default:
                             return (

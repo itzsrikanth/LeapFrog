@@ -79,7 +79,7 @@
                 "name": "settings",
                 "icon": "settings-5.svg",
                 "type": "link",
-                "to": "/"
+                "to": "/add-keys"
             }
         ]
     }

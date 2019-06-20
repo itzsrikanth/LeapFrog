@@ -1,42 +1,52 @@
-@import '../../variables.scss';
-
+@import "../../variables.scss";
 
 $taskbarHeight: 3rem;
 $statusbarHeight: 1rem;
 
 .credit {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
 }
 
 .taskbar {
-    width: 100vw;
-    height: $taskbarHeight;
-    background: $primary;
-    border-bottom: solid 2px $border;
-    box-sizing: border-box;
+  width: 100vw;
+  height: $taskbarHeight;
+  background: $primary;
+  border-bottom: solid 2px $border;
+  box-sizing: border-box;
 }
 
 .app {
-    height: calc(100vh - #{$taskbarHeight + $statusbarHeight});
+  height: calc(100vh - #{$taskbarHeight + $statusbarHeight});
 }
 
 .info-preview {
-    background: $primary;
-    border-right: solid 2px $border;
-    box-sizing: border-box;
-    box-shadow:  inset -10px -10px 30px -1px rgba(0,0,0,0.75);
+  background: $primary;
+  border-right: solid 2px $border;
+  box-sizing: border-box;
+  box-shadow: inset -10px -10px 30px -1px rgba(0, 0, 0, 0.75);
 }
 
 .code-editor {
-    background: yellow; 
+  background: yellow;
 }
 
 .status-bar {
-    height: $statusbarHeight;
-    background: $primary;
-    box-sizing: border-box;
-    border-top: solid 2px $border;
+  height: $statusbarHeight;
+  background: $primary;
+  box-sizing: border-box;
+  border-top: solid 2px $border;
+}
+
+.modals {
+  position: absolute;
+  &.active {
+    top: 5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }

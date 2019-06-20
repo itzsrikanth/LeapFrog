@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import { Provider } from 'react-redux';
 import Layout from './components/Layout';
-// import App from './components/App';
+import store from './configureStore';
+import './index.scss';
 
-ReactDOM.render(<Layout />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store()}>
+        <Layout />
+    </Provider>,
+    document.getElementById('root')
+);
