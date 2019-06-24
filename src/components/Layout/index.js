@@ -14,8 +14,6 @@ export default class Layout extends React.Component {
         history.push('/home');
     });
 
-    clickHandler = e => console.log('hello');
-
     render() {
         return (
             <Router>
@@ -24,12 +22,11 @@ export default class Layout extends React.Component {
                         <Taskbar />
                     </div>
                     <div className="app d-flex">
-
                         <Switch>
                             <Route path="/about" component={About} />
                             <Route path="/" >
                                 <Route path="/" component={DBClient} />
-                                <div className="modals active d-flex justify-content-center align-items-center" onClick={this.clickHandler}>
+                                <div className="modals active d-flex justify-content-center align-items-center" >
                                     <Route path="/add-keys" component={AddKeys} />
                                 </div>
                                 <Route path="/test1" component={Test1} />

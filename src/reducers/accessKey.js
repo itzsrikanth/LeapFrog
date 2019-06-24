@@ -5,8 +5,10 @@ import {
 const accessKey = (state = [], action) => {
     switch(action.type) {
         case ADD_ACCESS_KEY:
-            console.log(ADD_ACCESS_KEY);
-            return state;
+            return [
+                ...state,
+                action.key
+            ];
         default:
             return state;
     }

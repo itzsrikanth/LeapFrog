@@ -5,13 +5,12 @@ import allReducers from './reducers';
 export default (function () {
     var store;
     return function () {
-        if (store) {
-            return store;
+        if (!store) {
+            store = createStore(
+                allReducers,
+                applyMiddleware(thunk)
+            );
         }
-        store = createStore(
-            allReducers,
-            applyMiddleware(thunk)
-        );
         return store;
     };
 })();

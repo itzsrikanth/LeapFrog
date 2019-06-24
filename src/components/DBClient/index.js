@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InfoPreview from '../InfoPreview';
+import InfoPreview from '../../containers/InfoPreview';
 // import QueryEditor from '../QueryEditor';
 
 export default class DBClient extends React.Component {

@@ -3,7 +3,14 @@ const path = require('path');
 const { app, BrowserWindow, Menu } = require('electron');
 const isDev = require('electron-is-dev');
 const { default: installExtension, REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } = require('electron-devtools-installer');
-
+const db = require('./db');
+db.collections.keys.insert([{a: 1}], (err, doc) => {
+  if (err !== null) {
+    console.error(err);
+  } else {
+    console.log(doc)
+  }
+});
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
